@@ -1,0 +1,378 @@
+@font-face{
+    font-family: "Cheddar Jack";
+    src: url('../fonts/Cheddar\ Jack.ttf');
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+/* reset */
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* smooth scroll */
+html{
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+
+/* utility */
+
+.container{
+    width: 100%;
+    padding: 25px;
+    position: relative;
+}
+
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3;
+    color: #242323;
+}
+
+h2::after{
+    content: '';
+    width: 200px;
+    height: 3px;
+    background: #242323;
+    position: absolute;
+    top: 100px;
+    right: 110px;
+}
+
+
+
+
+
+/* header */
+.header{
+    display: block;
+    width: 100%;
+    max-height: 50px;
+    height: 50px;
+}
+
+
+.logo{
+    font-family: 'Cheddar Jack',cursive;
+    font-size: 2rem;
+    position: absolute;
+    top: 8px;
+    left: 25px;
+}
+
+
+.bar {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.bar1,.bar2,.bar3 {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #333333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+#menu.change{
+    position: fixed;
+}
+.change .bar1{
+    transform: translate(5px,7px);
+    background: #fff;
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+
+.change .bar3{
+    transform: translate(-15px, -2px);
+    background: #fff;
+}
+
+
+
+.navigasi{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    display: none;
+}
+
+.active{
+    display: block;
+    z-index: 1;
+    position: fixed;
+}
+
+
+.navigasi ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+}
+
+
+.navigasi ul li{
+    padding: 25px 10px;
+}
+
+.navigasi ul li a{
+    text-decoration: none;
+    color : #fff;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+
+.navigasi ul li:hover a{
+    color: rgb(7, 186, 218);
+}
+/* header */
+
+
+
+/* section jumbotron */
+
+.jumbotron{
+    background: linear-gradient(rgba(9, 199, 167, 0.685),rgba(51, 0, 235, 0.904)),url('../images/main.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    height: 400px;
+    width: 100%;
+    padding: 80px;
+    position: relative;
+}
+
+.jumbotron h1{
+    font-size: 2.5rem;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.829);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.jumbotron p{
+    font-size: .9em;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 20px;
+    word-spacing: 10px;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.829);
+}
+
+/* jumbotron */
+
+
+/* about section */
+
+.about{
+    position: relative;
+    box-sizing: border-box;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 3px;
+    background: linear-gradient(rgba(9, 199, 167, 0.685),rgba(51, 0, 235, 0.904));
+}
+
+.about img{
+    width: 100%;
+    border : 5px solid rgba(247, 247, 247, 0.877);
+}
+
+.about p{
+    color: #fff;
+    text-align: center;
+    margin: 15px;
+    line-height: 1.5;
+}
+/* about */
+
+
+/* personal information */
+.biodata{
+    position: relative;
+    background: #d6d5d548;
+}
+
+
+.table-container{
+    overflow-x: auto;
+}
+
+.biodata table{
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: linear-gradient(rgba(9, 199, 167, 0.685),rgba(51, 0, 235, 0.904));
+    border-radius: 10px;
+    color: #fff;
+}
+
+
+.biodata table td{
+    padding: 20px;
+    border: 1px solid #fff;
+}
+
+.biodata table td.right{
+    text-align: right;
+}
+
+/* personal information */
+
+
+/* contact */
+input,textarea{
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid rgb(9, 143, 148);
+    border-radius: 3px;
+}
+
+.contact button{
+    width: 100%;
+    padding: 10px;
+    background: rgb(15, 150, 204);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+.contact{
+    position: relative;
+}
+
+
+/* contact */
+
+/* footer */
+
+
+footer{
+    text-align: center;
+    font-size: 14px;
+    color: #dddddd;
+    background: blue;
+    padding: 25px;
+}
+
+
+@media (min-width: 976px){
+
+    /*  utility changes */
+    .container{
+        padding: 80px;
+    }
+
+    h2{
+        margin-top: -50px;
+        margin-bottom: 30px;
+    }
+
+    h2::after{
+        top: 120px;
+        right: 42%;
+    }
+
+    .bar{
+        display: none;
+    }
+
+    .navigasi{
+        position: static;
+        width: 100%;
+        display: block;
+        background: initial;
+    }
+
+    
+    .navigasi ul {
+        position: static;
+        float: right;
+        transform: none;
+        text-align: initial;
+        list-style: none;
+        margin: -10px 25px;
+    }
+    
+    
+    .navigasi ul li{
+        display: inline-block;
+    }
+    
+    .navigasi ul li a{
+        text-decoration: none;
+        color : #000;
+        font-size: 1em;
+        font-weight: 300;
+    }
+    
+
+
+    .jumbotron{
+        height: 100vh;
+    }
+    .jumbotron h1{
+        text-align: center;
+        margin-top: 100px;
+        font-size: 4rem;
+    }
+
+    .jumbotron p{
+        font-size: 2.5rem;
+    }
+
+
+    .about img{
+        width: 300px;
+    }
+
+    .about p{
+        text-align: left;
+
+    }
+    .card{
+        flex-direction: row;
+        padding: 100px;
+    }
+
+
+    .contact form{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+}
